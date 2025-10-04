@@ -1,0 +1,21 @@
+name: Email Test Action
+on: 
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
+      - name: 23f2000680@ds.study.iitm.ac.in
+        run: echo "Hello, world!"
+        
+      - name: Display runner info
+        run: |
+          echo "🎉 The job was triggered by a ${{ github.event_name }} event."
+          echo "🐧 This job is running on a ${{ runner.os }} server hosted by GitHub!"
+          echo "🔎 The branch is ${{ github.ref }} and repository is ${{ github.repository }}."
